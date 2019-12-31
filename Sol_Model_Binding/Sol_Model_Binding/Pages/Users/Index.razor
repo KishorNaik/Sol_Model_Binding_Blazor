@@ -1,0 +1,27 @@
+﻿@page "/user/index"
+@inject Sol_Model_Binding.ViewModel.Users.UsersViewModel userViewModel
+
+<h3>Index</h3>
+
+<div class="container">
+    <div class="row">
+        <div class="col-12">
+            <div class="form-group">
+                <input id="txtFirstName" class="form-control" @bind="@userViewModel.Users.FirstName" />
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-12">
+            <div class="form-group">
+                <input id="txtFirstName" class="form-control" @bind="@userViewModel.Users.LastName" />
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-12">
+            <button id="btnSubmit" class="btn btn-danger" value="Submit" @onclick="@userViewModel.OnSubmit">Submit</button>
+        </div>
+    </div>
+</div>
+
